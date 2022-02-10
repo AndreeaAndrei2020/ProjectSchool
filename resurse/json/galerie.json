@@ -1,0 +1,48 @@
+{
+    "cale_galerie": "resurse/imagini/galerie",
+    "imagini": [
+        {
+            "cale_fisier": "1.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "GOLD GUCCI",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "2.jpg",
+            "titlu":"Geanta2",
+            "text_descriere": "GOLD GUCCI4",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "3.jpg",
+            "titlu":"Geanta3",
+            "text_descriere": "GOLD PRINCESS5",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "4.jpg",
+            "titlu":"Geanta4",
+            "text_descriere": "GOLD PRINCESS",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "5.jpg",
+            "titlu":"Geanta5",
+            "text_descriere": "GOLD PRINCESS",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "6.jpg",
+            "titlu":"Geanta6",
+            "text_descriere": "GOLD PRINCESS",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "7.jpg",
+            "titlu":"Geanta7",
+            "text_descriere": "GOLD PRINCESS",
+            "anotimp": "toamna"
+        }
+       
+    ]
+}

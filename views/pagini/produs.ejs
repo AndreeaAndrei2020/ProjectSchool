@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ro">
+  
+        <head>
+
+            <title>Bagsforyou</title>
+            <meta name="keywords" content="Aboutourbags">
+            <meta name="description" content="Despre gentile noastre">
+            <%- include("../fragmente/head") %>    
+            <link rel="stylesheet" href="/resurse/css/produs.css" type="text/css" />
+            
+        </head>
+      
+
+    
+
+  <body>
+        
+      <%- include("../fragmente/header") %>          
+   
+    <main>
+        <article id="art-produs">  
+          <p><span >Geanta <a href="/produs/<%-prod.id %>"><%- prod.nume%></a></span></p>
+          <p><span> Categorie: <%- prod.categorie%></span></p>   
+              <div class="grid-container">
+                <div class="grid-item1">
+                    <figure class="imag-produs">
+                        <img  src="/resurse/imagini/produse/<%- prod.imagine %>" alt="geanta"/>
+                    </figure>
+                    <p id="pret">Pret: <%- prod.pret%> lei  </p>
+                  
+                </div>
+                <div class="grid-item2">
+                  <p id="descriere"><span><%- prod.descriere%></span></p> 
+                  <details id="detalii" style="width: 50%; position:relative; left: 20px;" >
+                        <summary>Mai multe detali . . .</summary>
+                            <ul>
+                              Materiale: <%- prod.materiale%>
+                            </ul>
+                            <ul>
+                              Culoare: <%- prod.culoare%>                         
+                            </ul>    
+                            <ul>
+                              Greutate: <%- prod.greutate%> kg
+                             </ul>       
+                             <ul>
+                              Dimensiune: <%- prod.dimensiune%>
+                             </ul>
+                             <ul>
+                                Aplicam vaucher? : <%- prod.vaucher%>
+                             </ul>
+                                       
+                             <ul>
+                               Data lansarii: <%- prod.data_adaugare%>
+                              </ul>
+                             
+                            </details>  
+                       
+                  </div>
+                
+              </div>
+        </article>
+    </main>
+      <br> <br> <br> <br>
+   <section id="bla">
+    <%- include("../fragmente/footer") %>   
+  </section>
+    
+  </body>
+</html>

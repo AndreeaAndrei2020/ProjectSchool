@@ -1,0 +1,190 @@
+create table Meniu(
+nume_ varchar(20) primary key,
+pret integer,
+);
+
+
+insert into Meniu(nume_produs,pret) values ('Cafea_vieneza','10');
+insert into Meniu(nume_produs,pret) values ('Caffe_latte','12');
+insert into Meniu(nume_produs,pret) values ('Capuccino','20');
+insert into Meniu(nume_produs,pret) values ('Espresso_scurt','20');
+insert into Meniu(nume_produs,pret) values ('Espresso_lung','20');
+insert into Meniu(nume_produs,pret) values ('Americano','20');
+insert into Meniu(nume_produs,pret) values ('Flate_white','20');
+insert into Meniu(nume_produs,pret) values ('Iced_caffee','20');
+
+
+
+create table Tip_boaba(
+nume_boaba varchar(15) primary key,
+cultivat_in varchar(15),
+aroma varchar(10)
+);
+insert into ingredient(nume_boaba,cultivat_in,aroma) values ('penna','Peru','cirese');
+insert into ingredient(nume_boaba,cultivat_in,aroma) values ('penna','Peru','caise');
+insert into ingredient(nume_boaba,cultivat_in,aroma) values ('penna','Peru','ciocolata');
+insert into ingredient(nume_boaba,cultivat_in,aroma) values ('penna','Peru','capsuni');
+insert into ingredient(nume_boaba,cultivat_in,aroma) values ('penna','Peru','capsuni');
+insert into ingredient(nume_boaba,cultivat_in,aroma) values ('penna','Peru','capsuni');
+
+
+
+create table ingrediente_produs(
+nume_ingredient varchar(20),
+mancare_nume varchar(20),
+primary key(nume_produs,nume_boaba)
+);
+
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Cafea_vieneza','frisca','penna');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Caffe_latte','lapte_cremos','peru');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Capuccino','lapte_cremos','columbia');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Espresso_scurt','apa','peru');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Americano','apa','columbia');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Flate_white','lapte_cremos','columbia');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Mochaccino','lapte_rece','columbia');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Iced_caffee','lapte_rece','columbia');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Irish','lapte_rece','columbia');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Frappe','lapte_rece','columbia');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Spanish','lapte_rece','columbia');
+insert into ingrediente_mancare(nume_produs,nume_ingredient1,nume_boaba) values ('Latte_machiato','lapte_rece','columbia');
+
+
+create table masa(
+nr_masa integer primary key,
+capacitate integer,
+loc_masa varchar(10)
+);
+
+insert into masa(nr_masa, capacitate , loc_masa) values(1,6,'interior');
+insert into masa(nr_masa, capacitate , loc_masa) values(2,5,'terasa');
+insert into masa(nr_masa, capacitate , loc_masa) values(3,6,'terasa');
+insert into masa(nr_masa, capacitate , loc_masa) values(4,2,'terasa');
+insert into masa(nr_masa, capacitate , loc_masa) values(5,5,'interior');
+insert into masa(nr_masa, capacitate , loc_masa) values(6,3,'terasa');
+insert into masa(nr_masa, capacitate , loc_masa) values(7,2,'terasa');
+insert into masa(nr_masa, capacitate , loc_masa) values(8,6,'interior');
+
+
+create table barista(
+nume_barista varchar(20) primary key,
+nr_telefon varchar(20),
+varsta integer
+);
+
+insert into barista(nume_barista,nr_telefon,varsta) values ('Andreea','0753424169','21');
+insert into barista(nume_barista,nr_telefon,varsta) values ('Andrei',0753456075','22');
+insert into barista(nume_barista,nr_telefon,varsta) values ('Andrei',0753456075','22');
+insert into barista(nume_barista,nr_telefon,varsta) values ('Andreea','0753424169','21');
+insert into barista(nume_barista,nr_telefon,varsta) values ('Andrei',0753456075','22');
+insert into barista(nume_barista,nr_telefon,varsta) values ('Andrei','0753456075','22');
+insert into barista(nume_barista,nr_telefon,varsta) values ('Andreea','0753424169','21');
+
+create table livrare(
+nr_livrare integer primary key,
+nume_livrator varchar(20),
+masina varchar(20)
+nr_comanda integer
+);
+insert into livrare(nr_livrare,nr_comanda,masina,nume_livrator) values (123,123,'SV03ANR','Andrei');
+insert into livrare(nr_livrare,nr_comanda,masina,nume_livrator) values (124,131,'SV02ANR','Ioan');
+insert into livrare(nr_livrare,nr_comanda,masina,nume_livrator) values (125,145,'SV01ANR','Tudor');
+insert into livrare(nr_livrare,nr_comanda,masina,nume_livrator) values (126,133,'SV05ANR','Veronica');
+insert into livrare(nr_livrare,nr_comanda,masina,nume_livrator) values (127,124,'SV07ANR','Viorel');
+insert into livrare(nr_livrare,nr_comanda,masina,nume_livrator) values (130,128,'SV07ANR','Ioan');
+
+
+create table bon(
+nr_bon integer primary key,
+cod_fiscal varchar(15),
+valoare integer,
+data date
+nr_comanda integer
+);
+
+
+insert into plata(nr_bon,cod_fiscal,valoare,data,nr_comanda) values(15,'RO2353355',15,TO_DATE('15-FEB-2021', 'dd-MON-yyyy'),10);
+insert into plata(nr_bon,cod_fiscal,valoare,data,nr_comanda) values(18,'RO2353355',12,TO_DATE('15-FEB-2021', 'dd-MON-yyyy'),13);
+insert into plata(nr_bon,cod_fiscal,valoare,data,nr_comanda) values(11,'RO2353355',8,TO_DATE('15-FEB-2021', 'dd-MON-yyyy'),12);
+insert into plata(nr_bon,cod_fiscal,valoare,data,nr_comanda) values(13,'RO2353355',8,TO_DATE('15-FEB-2021', 'dd-MON-yyyy'),11);
+insert into plata(nr_bon,cod_fiscal,valoare,data,nr_comanda) values(19,'RO2353355',7,TO_DATE('15-FEB-2021', 'dd-MON-yyyy'),14);
+insert into plata(nr_bon,cod_fiscal,valoare,data,nr_comanda) values(10,'RO2353355',7,TO_DATE('15-FEB-2021', 'dd-MON-yyyy'),15);
+
+create table client(
+nume_client varchar(20) primary key,
+nr_telefon varchar(20)
+);
+
+insert into client(nume_client,nr_telefon) values('Andrei Andreea','0753414169');
+insert into client(nume_client,nr_telefon) values('Marian Antonio','0753414169');
+insert into client(nume_client,nr_telefon) values('Sfabu Catalin','0753414169');
+insert into client(nume_client,nr_telefon) values('Jugariu Isabela','0753414169');
+insert into client(nume_client,nr_telefon) values('Catalin Blahovici','0753414169');
+insert into client(nume_client,nr_telefon) values('Serban Denisa','0753414169');
+insert into client(nume_client,nr_telefon) values('Cocan Denisa','0753414169');
+insert into client(nume_client,nr_telefon) values('Costeniuc Claudiu','0753414169');
+
+
+
+
+create table program(
+program_id primary key,
+nume_zi varchar(20)
+ora_zi varchar(20)
+);
+
+insert into client(program_id,nume_zi,ora_zi) values('Luni','0753414169');
+insert into client(program_id,nume_zi,ora_zi) values('Marti','0753414169');
+insert into client(program_id,nume_zi,ora_zi) values('Miercuri','0753414169');
+insert into client(program_id,nume_zi,ora_zi) values('Joi','0753414169');
+insert into client(program_id,nume_zi,ora_zi) values('Vineri','0753414169');
+insert into client(program_id,nume_zi,ora_zi) values('Sambata','0753414169');
+insert into client(program_id,nume_zi,ora_zi) values('Duminica','0753414169');
+
+
+
+
+
+
+create table chelner(
+nume_chelner varchar(20) primary key,
+varsta integer,
+nr_telefon varchar(20)
+);
+
+insert into ospatar(nume,varsta,nr_telefon) values ('Andrei Andreea',18,'0753414169');
+insert into ospatar(nume,varsta,nr_telefon) values ('Spiridon Andreea',18,'0753414009');
+insert into ospatar(nume,varsta,nr_telefon) values ('Blahovici Albert',22,'0753411169');
+insert into ospatar(nume,varsta,nr_telefon) values ('Spiridon Tudor',23,'0753414456');
+insert into ospatar(nume,varsta,nr_telefon) values ('Flutur Vasile',25,'0753414099');
+insert into ospatar(nume,varsta,nr_telefon) values ('Pislariu Alexandru',22,'0753454169');
+insert into ospatar(nume,varsta,nr_telefon) values ('Costeniuc Claudiu',28,'0753414894');
+
+
+
+
+
+
+
+
+create table comanda(
+nr_comanda primary key,
+data date,
+valoare integer
+
+);
+
+insert into comanda(nr_comanda,data,valoare) values(123,TO_DATE('3-Feb-2021', 'dd-MON-yyyy'),10);
+insert into comanda(nr_comanda,data,valoare) values(125,TO_DATE('3-Feb-2021', 'dd-MON-yyyy'),8);
+insert into comanda(nr_comanda,data,valoare) values(121,TO_DATE('3-Feb-2021', 'dd-MON-yyyy'),7);
+insert into comanda(nr_comanda,data,valoare) values(120,TO_DATE('3-Feb-2021', 'dd-MON-yyyy'),7);
+insert into comanda(nr_comanda,data,valoare) values(126,TO_DATE('3-Feb-2021', 'dd-MON-yyyy'),6);
+insert into comanda(nr_comanda,data,valoare) values(140,TO_DATE('3-Feb-2021', 'dd-MON-yyyy'),10);
+
+
+
+
+
+
+
+
+

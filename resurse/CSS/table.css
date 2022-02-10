@@ -1,0 +1,64 @@
+
+#tabel{
+  overflow-x: auto;
+  width: 100%;
+}
+
+#tabel-orar{
+  border: 3px solid  var(--spreinchis);
+  width : 100%;
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  font-size: 1.05em;
+}
+#tabel-orar th{
+  color: var(--inchis);
+    text-align: center;
+  border: 3px solid  var(--spreinchis);
+    background-color: var(--mijloc);
+}
+#tabel-orar td{color: var(--inchis);
+   border: 3px solid  var(--spreinchis);
+  text-align: center;
+  min-width: 80px;
+}
+#tabel-orar tr:nth-child(even) {
+    background: var(--mijloc);
+}
+
+#tabel-orar tr:nth-child(odd) {
+    background: var(--deschis);
+}
+#tabel-orar tr:hover {
+    background-color: var(--placut);
+    color: var(--inchis);
+}
+
+ 
+
+
+#titluorar{
+   color:var(--inchis);
+   text-align: center;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  #tabel-orar {
+       
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        pointer-events: none;
+    }
+
+    #tabel-orar tr{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+}

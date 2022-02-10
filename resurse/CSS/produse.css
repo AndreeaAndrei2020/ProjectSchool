@@ -1,0 +1,115 @@
+
+.grid-produse{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:1rem;
+  
+
+ 
+}
+
+
+.grid-container-produse {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:1rem;
+  }
+ 
+#table-produs{
+    background-color: white;
+    /*border-radius: 0em;*/
+    border : 2px solid var(--inchis);
+    position :relative;
+    left: 30px;
+    
+    /*
+    height: 10px;
+    width: 30px;
+
+    */
+    
+
+
+}
+
+#table-produs th{
+  border : 2px solid var(--inchis);
+  text-align: center;
+
+  background-color: var(--mijloc);
+}
+
+
+#table-produs td{
+ /* height: 6px;
+  width: 50px;
+  */border : 2px solid var(--inchis);
+  text-align: center;
+  background-color: var(--deschis);
+
+
+}
+
+
+
+table {
+  border-collapse: collapse; /* fara linii duble la tabel*/
+  width: 10%;
+  background-color: var(--placut);
+}
+
+
+
+#bla div{   /* divurile pentru filtrari*/
+
+  padding-right: 30px; 
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+#bla{
+  display: flex;
+}
+.optiuni div{
+  
+  padding-right: 30px;
+  padding-bottom: 10px;
+  font-size: 15px;
+ 
+}
+.optiuni{
+  display: flex;
+}
+
+  
+main{
+  --padd-main:1rem;
+   padding-left:var(--padd-main);
+   padding-right:var(--padd-main);
+   font-size: 74%;
+}
+.produs{
+
+  box-shadow: 0px 0px 10px 5px var(--placut);
+}
+#butoane button{
+  box-shadow: 0px 0px 10px 5px var(--spreinchis);
+  border:2px solid var(--spreinchis);
+}
+@media screen and (max-width: 1024px) {
+  
+  .grid-produse{
+    display: block;
+  }
+  #bodyProduse{
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+ 
+  .grid-produse{
+    display: block;
+  }
+  #bodyProduse{
+    font-size: 5px;
+  }
+}

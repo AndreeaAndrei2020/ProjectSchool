@@ -1,0 +1,96 @@
+{
+    "cale_galerie": "resurse/imagini/galerieStatic",
+    "imagini": [
+        {
+            "cale_fisier": "1.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "GOLD GUCCI",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "2.jpg",
+            "titlu":"Geanta2",
+            "text_descriere": "GOLD PRINCESS",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "3.jpg",
+            "titlu":"Geanta3",
+            "text_descriere": "ViOLETA",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "4.jpg",
+            "titlu":"Geanta4",
+            "text_descriere": "SHINE",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "5.jpg",
+            "titlu":"Geanta5",
+            "text_descriere": "GOLD GIRL",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "6.jpg",
+            "titlu":"Geanta6",
+            "text_descriere": "SILVER PINK",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "7.jpg",
+            "titlu":"Geanta7",
+            "text_descriere": "GOLD PRINCESS",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "8.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "SUN SHINE",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "9.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "GOLD GUESS",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "10.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "GOLD PRADA",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "11.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "RIO DE VIOLET",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "12.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "GOLD GUCCI",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "13.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "BEUTY BAG",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "14.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "GOLD HOUR SHINE",
+            "anotimp": "primavara"
+        }
+        ,
+        {
+            "cale_fisier": "15.jpg",
+            "titlu":"Geanta1",
+            "text_descriere": "GOLD HOUR3",
+            "anotimp": "vara"
+        }
+    ]
+}

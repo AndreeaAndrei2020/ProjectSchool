@@ -1,0 +1,49 @@
+
+.banner {
+  
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    font-size: 2rem;
+    color: transparent;
+    animation-name: banner;
+    animation-delay: 1s;
+    animation-duration:10s;
+    animation-timing-function: linear;
+    margin:auto; 
+    width: 100%;   
+    
+    z-index: 20;
+ 
+}
+@keyframes banner {
+   
+     0%   {
+        left: -100%;
+        display: none;
+        opacity:1;
+        background-color: var(--deschis);
+        border-color: var(--spreinchis);
+
+        color:black;
+
+      }
+
+    25%  {
+          left: 0px;
+          background-color: var(--mijloc);
+          border-color: var(--spreinchis);
+          color:black;
+           
+    }
+  
+  50% {
+          right: 0px; 
+          background-color: var(--deschis);
+          color:black;
+    }
+    100% {
+         display: none;
+    }
+}
+

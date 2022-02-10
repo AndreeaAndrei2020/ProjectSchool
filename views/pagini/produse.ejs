@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    
+      <title>Bagsforyou</title>
+      
+       <meta name="keywords" content="Aboutourbags">
+       <meta name="description" content="Despre gentile noastre">
+       <%- include("../fragmente/head") %>    
+       <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+  </head>
+    
+
+<body id="bodyProduse">
+    
+      <%- include("../fragmente/header") %> 
+  <main>
+
+    <div id="bla"> 
+            <div>
+                <label for="story" class="bord" style="position: relative; top: -20px;">Ce cauti?: </label>    <!--E   TEXTAREA-->
+                <textarea id="id-textarea" name="story" rows="2" cols="33"></textarea>
+            </div>
+              
+            <div>
+              <label class="bord" > Nume geanta: <input type="text" id="id-nume" value=""></label>  <!--A  TIP TEXT-->
+            </div>   
+
+            <div>
+                <label for="materiale" class="bord" > Geanta de :       <!--F select simple-->
+                    <select name="materiale" id="materiale">
+                      <option value="toate" class="bord">Toate</option>
+                      <option value="piele" class="bord" >Piele</option>
+                      <option value="panza" class="bord">Panza</option>
+                    </select>
+                </label>  
+            </div>
+
+            <div>
+              <label class="bord"  style="position: relative; top: -2px;"> Pret <span id="demo"></span>: <input type="range" id="id-pret" step="1" min="100" max="600">  </label>   <!--B   RANGE-->
+            </div>
+
+     </div>
+           
+
+      <div class="optiuni">               
+          <div>
+                <label for="categorie" class="bord" style="position:relative; top:-20px ; margin: 20px;" >Categorie: </label>    <!--G select multiple-->
+                  <select name="nedorite" id="categorie" multiple size ="2">
+                    <option value="ocazie">ocazie</option>
+                    <option value="plaja" >plaja</option>
+                    <option value="casual" >casual</option>               
+                  </select>
+          </div>                  
+              
+          <div style=" margin: 20px; position:relative; top:-20px ;">                                                                 <!--C RADIO-->
+              <div class="bord"  >Cu vaucher:</div>
+                    <input type="radio" id="da" name="vaucher1" value="true" >
+                    <label for="da" class="bord">Da</label>
+                    <input type="radio" id="nu" name="vaucher1" value="false">
+                    <label for="nu" class="bord">Nu</label>
+          </div>
+            
+            
+          <div class="bord">Culoare:  
+                <div>                                        <!--D CHECKBOX-->
+                    <input type="checkbox"  id="roz" checked name="culoare" value="roz">
+                    <label for="culo" class="bord">Roz</label>
+                    <input type="checkbox" id="rosu" checked  name="culoare" value="rosu">
+                    <label for="culo" class="bord">Rosu</label>
+                    <input type="checkbox" id="gri" checked name="culoare" value="gri">
+                    <label for="culo" class="bord" >Gri</label>
+                    <input type="checkbox" id="bej" checked name="culoare" value="bej">
+                    <label for="culo" class="bord">Bej</label>
+                    <input type="checkbox" id="albastru" checked name="culoare" value="albastru">
+                    <label for="culo" class="bord">Albastru</label>    
+                </div> 
+           </div>  
+     
+    </div>
+       
+        <p id="butoane">
+          <button id="filtrare">Filtreaza</button>
+          <button id="sortCrescNume">Sorteaza crescator dupa nume</button>
+          <button id="sortDescrescNume">Sorteaza descrescator dupa nume</button>
+          <button id="resetare">Reseteaza</button>
+          <button id="medie">Media preturilor</button>
+         
+      </p>
+
+   
+    <div id="avertizare"></div>
+    <div id="mediaProd">
+        
+      <br><br> </div>
+    <section class="ProduseSection">  <!--produse-->
+     
+         <h2>Produse</h2>
+         <div class="grid-produse">
+            <% for(let prod of locals.produse){ %> 
+               <article class="produs" style=" text-align: center;" > ent<%- prod.id%>    <!--produs-->
+                          <h3>Geanta<a href="/produs/<%-prod.id %>"> <span  class="numegeanta"><%- prod.nume%></span></a></h3>
+                          <div class="grid-container-produse">
+                                  <div class="gridut11">
+                                    <table id ="table-produs">
+                                      <tr>
+                                        <th>Pret</th> <!--numerica-->
+                                        <th>culoare</th>
+                                        <th>Materiale</th> <!--cu mai multe-->
+                                        <th>Data lansarii</th> <!--data-->
+                                        <th>Vaucher</th>  <!--booleana-->                       
+                                      </tr>
+                                      <tr>
+                                        <td class="val-pret"><%- prod.pret%> lei </td>
+                                        <td class="val-culoare"><%- prod.culoare%></td>  
+                                        <td class="val-materiale"> <%- prod.materiale%> </td>
+                                        <td> <time datetime="2021-01-01 00:00:00"><%- prod.data_adaugare%></time></td>
+                                        <td class="val-vaucher"><%- prod.vaucher%></td>
+                                      </tr>
+                                    </table>
+                                   
+
+                                  <p class="val-descriere" style=" width: 100%;   position: relative;
+                                  left: 10px;  font-size: 15px;  padding-top: 0px;" ><%- prod.descriere%> </p>
+                                  <p style=" width: 100%;   position: relative;
+                                   font-size: 15px;">Geanta de: <span class="categorieGenti" ><%- prod.categorie%></span>  </p>
+                                  </div>
+                                  
+                                 <figure class="gridut22">
+                                    <img  src="/resurse/imagini/produse/<%- prod.imagine%>" alt="geanta"/>
+                                 </figure>
+                          </div>                                 
+              </article>
+            <% } %>
+         </div>
+    </section>
+    <script type="text/javascript" src="/resurse/js/produse.js"></script>
+   
+    
+      </main>
+      
+
+    <%- include("../fragmente/footer") %>   
+     
+    
+  </body>
+</html>

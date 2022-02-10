@@ -1,0 +1,120 @@
+
+@media print {
+      /*1*/
+    .banner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 6px double black;
+        width: 50vw;
+        height: 80px;
+        animation: none;
+        margin: 0;
+        color: black;
+       
+    }
+        /*2*/
+            figcaption,img{
+                display:none;
+            }
+            #galerie-statica{
+                display:none;
+            }
+            #galerie-animata{
+                display:none;
+            }
+            #silu{
+                display: none;
+            }
+
+    /*3*/
+    .diamond{
+        display: none;  
+    }
+  
+
+    /*4*/
+    a {
+        text-decoration: none;  
+    }
+
+  
+ 
+  
+    
+    /*5*/
+  
+    #normal{
+        position: absolute;
+        left:30%;
+        top:10px;
+    }
+  
+    
+    .meniu {
+        
+        flex-direction: column;
+        page-break-after: always;
+        position: relative;
+        top: 170px;
+    }
+
+    ul#listuta {
+        position: relative;
+        display: block;
+    }
+
+  /*6*/
+       #watermark {
+        width: 60vw;
+        height: 10vh;
+        margin: auto;
+        display: block;
+        position: fixed;
+        bottom: 40%;
+        right: 17%;
+        align-items: center;            
+        justify-content: center; 
+        color: rgba(0,0,0,0.3);
+        font-size: 60px;
+        z-index: 99;
+        text-align: center;
+    }
+    /*
+    #watermark::after {
+   
+        color: black;
+        display: block;
+        white-space: pre-wrap;
+        align-items: center;            
+        justify-content: center; 
+        
+        
+    }*/
+    h1 span{ text-align: center;
+        position: relative;
+        top: 85px;
+        
+      }
+      #tabel2{
+         font-size: 10px;
+      }
+      footer {page-break-before: always;}
+}
+
+@page {
+    size: A4 portrait;
+ /*   counter-increment: page;*/
+}
+
+/*7*/
+@page:left{   
+
+    margin-left:2cm;
+    margin-right:1cm;
+}
+@page:right{
+
+    margin-right:2cm;
+    margin-left:1cm;
+}

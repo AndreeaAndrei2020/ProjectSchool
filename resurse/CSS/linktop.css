@@ -1,0 +1,75 @@
+.diamond{
+   
+    position: fixed;
+    display:block;
+    opacity:0.6;
+    background-color: var(--mijloc);
+    width:50px;
+    height:50px;
+    bottom:0;
+    right:0;
+    transform: rotate(-45deg);
+    transform-origin: 0 60%;
+    border: 3px solid var(--spreinchis); 
+    /*overflow:visible;*/
+    
+}
+.picatura{
+     
+   
+    border-left: 20px solid transparent;
+  	border-right: 20px solid transparent;
+	  border-bottom: 30px solid var(--inchis);
+    border-bottom-right-radius: 80px ;
+    border-bottom-left-radius: 80px ;
+    opacity:0.8;
+  
+    transform: rotate(+45deg);
+
+    position: absolute;
+    left: 12px;
+    bottom: 18px;
+    /*overflow:visible;*/
+   
+}
+.picatura:hover {
+        opacity: 1;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 30px solid var(--inchis);
+        transition:all 1s linear;
+   
+}
+.diamond:hover {
+          opacity: 1;
+          background-color:var(--alb);
+          overflow:visible;
+          transition:all 1s linear;
+          border: 3px solid var(--spreinchis);
+}
+
+.picatura .tooltiptext {
+    visibility: hidden;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    background-color: var(--spreinchis);
+    color: var(--alb);
+    text-align: center;
+    border-radius: 6px;
+    top:-60px;
+    left:-31px;
+
+  /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+.picatura:hover .tooltiptext {
+  visibility: visible;
+  /*transition:all 0.5s linear; */
+}
+
+
+
+

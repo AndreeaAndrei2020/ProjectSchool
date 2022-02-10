@@ -1,0 +1,141 @@
+ @font-face {
+                font-family: Sofia;
+              src: url(https://fonts.gstatic.com/s/sofia/v9/8QIHdirahM3j_su5uI0.woff2) format('woff2');
+        }
+          
+          body {
+           font-family: Sofia, cursive;
+        
+           margin: 0;   
+          }
+         
+
+          h2 {text-align: center; font-size: 1.8rem;
+          }
+          h3{
+            text-align: center;
+          }
+          p {text-align: center; font-size: 1.2rem;}
+          p.ex1 {
+                font-size: 1.5rem;
+                color: var(--deschis);
+             
+                }
+
+          pre
+          {
+                text-align:center
+          }
+          a:visited
+          {
+                color: black;
+                text-decoration: none;
+          }
+           a:link
+          {
+                color: black;
+                text-decoration: none;
+          }
+         
+          a:hover
+          {
+              
+                background-color:transparent;
+                text-decoration: underline;
+          }
+        #strongg{
+          text-align: center;
+          font-size: 1.5rem;
+        }
+ h1{
+  font-size:2.2rem;
+  letter-spacing:0.2em;
+  background-image:linear-gradient(to right, var(--alb) 20%, var(--placut));
+  position:relative;
+  border-top-left-radius:3rem;
+  height:5rem;
+  font-weight:900;
+  color: #5E3532; 
+  font-family: cursive;
+
+}
+
+h1 img {
+    height: 1.5em;
+    position: absolute;
+    left: 0;
+    bottom: 0.15em;
+    border-radius:50%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+h1 span{
+  position:absolute;
+  bottom:0;
+  left: 60px;
+}
+
+.flexul {
+  width: 240px;
+  height: 60px;
+  display: flex;
+  border-color: var(--mijloc);
+  
+  
+}
+
+
+
+
+.servicii{
+  background-color: var(--deschis);
+  margin: 10px;
+  display: inline-block;
+  
+  height: 40%;
+}
+#NEWSLETTER i{
+  color: black;
+}
+footer i {
+    margin: 20px 30px 0 30px;
+    font-size: 1.8rem;
+    transition: all 0.5s;
+    color: #4267B2;
+}
+
+footer i:hover {
+    cursor: pointer;
+    color: #4267B2;
+    transform: rotate(360deg) ;
+    border-radius: 7px;
+}
+
+footer .fa-facebook:hover {
+    color: #4267B2;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+footer .fa-instagram-square:hover {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+
+footer .fa-twitter:hover {
+    color: #1DA1F2;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+}
+.fbinsta{
+  text-align: center;
+}
+
+#for-print{
+  display: none;
+
+}
+#asezareServicii{
+  text-align: center;
+}

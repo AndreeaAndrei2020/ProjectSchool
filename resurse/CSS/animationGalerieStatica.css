@@ -1,0 +1,181 @@
+
+html {
+      font-size: 17px;
+      scroll-behavior: smooth;
+    }
+
+body{
+    font-size: 0.95em;
+    overflow-x: scroll;
+    }   
+
+figcaption{
+        color: black;
+        position:relative;
+        bottom:0;
+        font-weight: bold;
+        text-align:center;
+      }
+
+ #galerie-statica .grid-galerie-statica{
+        display:grid;
+        padding: 20px;
+        grid-template-columns: repeat(3,1fr);
+        margin: auto;
+      }
+   
+  
+ /*linia 1*/
+    .grid-galerie-statica figure:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+     
+    }
+
+    .grid-galerie-statica figure:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+
+    }
+
+    .grid-galerie-statica figure:nth-child(3) {
+      grid-column: 3/4;
+      grid-row: 1/2;
+     
+
+    }
+/*linia 2*/
+    .grid-galerie-statica figure:nth-child(4) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      
+    }
+    .grid-galerie-statica figure:nth-child(5) {
+      grid-column: 3/4;
+      grid-row: 2/3;
+     
+    }
+    /*linia 3*/
+    .grid-galerie-statica figure:nth-child(6) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+    .grid-galerie-statica figure:nth-child(7) {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+    .grid-galerie-statica figure:nth-child(8) {
+      grid-column: 3/4;
+      grid-row: 3/4;
+    }
+    /*linia4*/
+    .grid-galerie-statica figure:nth-child(9) {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+    .grid-galerie-statica figure:nth-child(10) {
+      grid-column: 3/4;
+      grid-row: 4/5;
+    }
+    /*linia5*/
+    .grid-galerie-statica figure:nth-child(11) {
+      grid-column: 1/2;
+      grid-row: 5/6;
+    }
+    .grid-galerie-statica figure:nth-child(12) {
+      grid-column: 2/3;
+      grid-row: 5/6;
+    }
+    .grid-galerie-statica figure:nth-child(13) {
+      grid-column: 3/4;
+      grid-row: 5/6;
+    }
+
+
+
+
+      @media screen and (max-width: 1024px) {
+        #galerie-statica .grid-galerie-statica{
+            grid-template-columns: repeat(2, 2fr);
+            margin: auto;
+            grid-auto-columns: auto;
+        
+        }
+        /*linia1*/
+        .grid-galerie-statica figure:nth-child(1) {
+          grid-column: 1/2;
+          grid-row: 1/2;
+         
+        }
+    
+        .grid-galerie-statica figure:nth-child(2) {
+          grid-column: 2/3;
+          grid-row: 1/2;
+    
+        }
+           /*linia 2*/
+    
+        .grid-galerie-statica figure:nth-child(3) {
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+
+        .grid-galerie-statica figure:nth-child(4) {
+          grid-column: 2/3;
+          grid-row: 2/3;
+          
+        }
+              /*linia 3*/
+        .grid-galerie-statica figure:nth-child(5) {
+          grid-column: 1/2;
+          grid-row: 3/4;
+         
+        }
+  
+          .grid-galerie-statica figure:nth-child(6) {
+            grid-column: 2/3;
+            grid-row: 3/4;
+          }
+          /*linia4*/
+        .grid-galerie-statica figure:nth-child(7) {
+          grid-column: 1/2;
+          grid-row: 4/5;
+        }
+        .grid-galerie-statica figure:nth-child(8) {
+          grid-column: 2/3;
+          grid-row: 4/5;
+        }
+         /*linia5*/
+        .grid-galerie-statica figure:nth-child(9) {
+          grid-column: 1/2;
+          grid-row: 5/6;
+        }
+        .grid-galerie-statica figure:nth-child(10) {
+          grid-column: 2/3;
+          grid-row: 5/6;
+        }
+        /*linia5*/
+        .grid-galerie-statica figure:nth-child(11) {
+          grid-column: 1/2;
+          grid-row: 5/6;
+        }
+        .grid-galerie-statica figure:nth-child(12) {
+          grid-column: 2/3;
+          grid-row: 5/6;
+        }
+        /*linia 6*/
+        .grid-galerie-statica figure:nth-child(13) {
+          grid-column: 1/2;
+          grid-row: 6/7;
+        }
+      
+       
+    }
+  
+     @media screen and (max-width: 600px) {
+      #galerie-statica .grid-galerie-statica {
+        display:block;
+        margin: 50px ;
+      }
+
+     }

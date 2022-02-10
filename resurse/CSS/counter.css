@@ -1,0 +1,11 @@
+body {
+    counter-reset: section;
+}
+
+th::before {
+    counter-increment: section;
+    content: counter(section) ".";
+}
+
+/*numara coloanele tabelului*/
+ 

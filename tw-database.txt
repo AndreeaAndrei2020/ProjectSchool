@@ -1,0 +1,68 @@
+
+create database proiect ENCODING 'UTF-8' LC_COLLATE 'ro-RO-x-icu' LC_CTYPE 'ro_RO' TEMPLATE template0;
+
+CREATE USER postgre WITH ENCRYPTED PASSWORD 'andreea2000';
+
+GRANT ALL PRIVILEGES ON DATABASE proiect TO andreea;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO andreea;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO andreea;
+
+
+CREATE TYPE categ_prod AS ENUM( 'casual', 'plaja', 'ocazie');
+
+create table if not exists genti(
+ 	id serial PRIMARY KEY,
+	nume varchar(30) UNIQUE NOT NULL,
+	pret NUMERIC(8,2) not null,
+	descriere text,
+	greutate int not null check(greutate>0),
+	categorie categ_prod DEFAULT 'casual',
+	materiale VARCHAR [],
+	imagine varchar(300),
+	culoare varchar(300),
+	dimensiune varchar(300),
+	vaucher BOOLEAN NOT NULL DEFAULT FALSE,
+	data_adaugare TIMESTAMP DEFAULT current_timestamp
+);
+
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('1','Ely fdgdfLudx', 500,'Geanta de dama Velma Negru este atractiva prin forma si designul sau. Se remarca prin rezistenta in timp fiind confectionata din material de calitate superioara.',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('2','Ely Luxy', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('3','Ely Lugddgx1', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('4','El6y fgd1Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('5','El6y L564645w1x', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('6','Ely4 L6546u1x', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('7','Ely L215654ux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('8','Ely L3ux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('9','Ely Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('10','Ely44 8Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('11','E766ly Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('12','Ely 88L33ux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('13','Ely 5775Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('14','Ely Lux77d', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('15','Ely66 66Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('16','Ely88855 Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('17','Ely 044Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('18','Ely Lu334x', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('19','Ely 5522Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+insert into genti (id,nume,pret,descriere,greutate,categorie,materiale,imagine,culoare,dimensiune, data_adaugare,vaucher) values
+('20','Ely 61177Lux', 500,'Descriere',2,'plaja','{"panza","satin"}','17.jpg','bej','20x30','2021-01-01',FALSE);
+

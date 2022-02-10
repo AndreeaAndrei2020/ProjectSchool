@@ -1,0 +1,234 @@
+nav {
+    margin: auto; /*e*/
+    height: 3rem;
+    width: 100%;
+    top: 0;
+    padding: 0;
+    
+    z-index: 10;
+    position: relative;
+    
+}
+
+/*toti li uirle din meniu*/
+nav ul.meniu>li {
+ 
+    width: 100%;
+    position: relative;
+    font-size: 1.3rem;
+ 
+    
+    float: left; 
+}
+
+nav ul.meniu li {
+    text-align: center;
+    list-style-type: none; /* pt bulinutele */
+    background: var(--placut);
+    cursor: pointer;  /* sa apara manuta */
+}
+
+/*ul.meniu= ul de clasa meniu*/
+nav ul.meniu ul {
+    display: none; /* sa nu apara optiunile*/
+    position: absolute;   /* nu mai aapare backgroundul*/
+    width: 100%;   /* sa ocupe toata lungimea */
+}
+
+
+nav ul.meniu li a {
+    text-decoration: none;
+    display: block; /* sa ia toata lungimea */
+    font-weight: bold;
+    height: 3rem;
+    line-height: 3rem; /* spatiu dintre linii*/
+}
+
+ul.meniu li a::before {
+    content: "";
+    width: 0px;
+    height: 5px;
+    background: linear-gradient( 200deg, white, var(--placut));
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+    bottom: 0px;
+}
+
+ul#listuta li a::before {
+    position: fixed;
+    transition: 0s;
+}
+
+nav ul.meniu ul:hover{
+    height:200px;
+}
+
+#listuta:hover{
+    transform-origin:0px center;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+	/*animation-fill-mode:forwards; */
+	animation-duration:2s;	
+	transform-origin:0px center;
+}
+ul#listuta li a:hover {
+    background: var(--inchis);
+}
+
+ul.meniu li a:hover::before {  /* cand atingem si se vede linia gradient */ 
+    width: 100%;
+}
+/*
+nav ul li a:after {
+    transform-origin: 100% 50%;
+}*/
+
+nav ul.meniu a {
+    transition: background 100ms linear;
+}
+
+
+
+nav ul.meniu>li:hover>ul {
+    display: block;
+    animation-name: aparitie_meniu;
+   /* animation-iteration-count: 1;  de cate ori sa apara ul uirle la atingere */
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    
+}
+
+nav ul, nav li {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around; /* distribuie unform articolele*/
+}
+
+#hamburger {
+    display: none;
+    height: 3rem;
+}
+
+#hamburger img {
+    height: 100%;
+    width: auto;
+}
+
+#ch-menu {
+    display: none;
+}
+
+#ascuns{
+    display: none;
+}
+/*
+@keyframes aparitie_meniu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+*/
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    nav ul.meniu>li {
+     
+        font-size: 1.5rem;
+        
+    }
+    
+    #ascuns{
+        display: block;
+        font-size: 1.2rem;
+    }
+    #acasa {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 870px) {
+    #hamburger {
+        display: block;   /* ca sa apara hamburgerul*/
+    }
+   /* ul.meniu {
+        display: none;
+        position: absolute;
+        width: 100%;
+    }*/
+    #ch-menu:checked+ul.meniu {
+        display: block;
+    }
+    nav ul.meniu li {
+        width: 100%;
+    }
+    nav ul.meniu>li ul {
+        position: absolute;
+        width: 100%;
+        z-index: 20;
+    }
+    /*
+    nav ul.meniu>li li a::before {
+        content: "▷    ";
+        color:redc#fff;
+    }*/
+
+    ul.meniu li a::before {
+        position: fixed;
+
+    }
+    
+    ul.meniu li a:hover::before {
+        width: 100%;
+    }
+    
+    ul.meniu li a:hover {
+        background: var(--inchis);
+        color: rgb(141, 56, 56);
+    }
+
+   
+    #acasa {
+        display: none;
+    }
+
+    #ascuns{
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(-90deg);
+            opacity: 0;
+        }
+        100% {
+            /*transform: scaleX(0deg);*/
+            opacity: 1;
+        }
+    }
+
+    ul.meniu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        animation: rotate .7s ease-in-out forwards;
+        transform-origin: left;
+    }
+}

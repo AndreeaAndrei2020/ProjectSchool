@@ -1,0 +1,217 @@
+html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 0.95em;
+    overflow-x: scroll;
+}
+
+
+.grid-pagina{
+
+  display:grid;
+  grid-template-areas: 
+  "gr-despre gr-despre gr-despre gr-despre"
+  "gr-calendar gr-tabel gr-tabel gr-anunt"
+  "gr-utilizator gr-tabel gr-tabel gr-anunt"
+  "gr-utilizator gr-statistici gr-statistici gr-dateserver"
+  "gr-alte  gr-alte gr-alte gr-alte" ;
+  grid-gap: 2rem;   
+   
+   
+}
+.grid-pagina > section{ 
+  font-size:0.95em;
+}
+
+#hero1{
+    grid-area: gr-despre;
+    border: 3px solid var(--inchis);
+    margin-left: 23px;
+   
+}
+
+#tabel2{   grid-area: gr-tabel; }
+
+#calendar3{    grid-area: gr-calendar;   }
+
+#anunturi4{  grid-area: gr-anunt;  }
+
+#Lutilizator5{  grid-area: gr-utilizator;  }
+
+#statistici6{   grid-area: gr-statistici;   }
+
+#dateserver7{  grid-area: gr-dateserver;   }
+
+#zona8{   grid-area: gr-alte;  }
+
+
+#hero1 {
+    /* Sizing */
+    width: 90vw;
+    height: 60vh;
+    
+    /* Flexbox stuff */
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+   
+    /* Background styles */
+    background-image: url('../imagini/44.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    
+}
+/*spatiu intre margina si sectiune*/
+.grid-pagina section{
+    padding:2rem;
+}
+/*
+#tabel2{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    
+}*/
+
+#anunturi4 section{
+    border-image:none;
+    border-width: 1px;
+    border-style:solid;
+    border-color:var(--deschis);
+    border-radius:1.5rem;
+    margin-bottom:0.7rem;
+    box-shadow:0px 0px 7px 2px var(--deschis);
+}
+
+
+
+
+
+
+
+
+/*mediu                                 */
+@media screen and (max-width: 1024px) {
+        .grid-pagina{
+        background:white;
+        box-sizing:border-box;
+        display:grid;
+        grid-template-areas: 
+        "gr-despre gr-despre gr-despre gr-despre"
+        "gr-calendar gr-calendar gr-anunt gr-anunt"
+        "gr-tabel gr-tabel gr-tabel gr-tabel"
+        "gr-utilizator gr-statistici gr-statistici gr-dateserver"
+        "gr-alte  gr-alte gr-alte gr-alte" ;
+        grid-gap: 10px;   
+        /*padding: 40px;*/
+
+
+      }
+
+      html {
+        font-size: 19px;
+   
+      }
+    
+      body {
+              font-size: 1.15em;
+          }
+
+      .grid-pagina > section{ 
+            font-size:1.15em;
+          }
+
+
+
+      /*spatiu intre margina si sectiune*/
+      .grid-pagina section{
+
+          padding:2rem;
+      }
+
+
+          p{ 
+            font-size: 1.0rem;
+          }
+          h2{
+            font-size: 1.8rem;
+          }
+          h1{
+            font-size: 2rem;
+          }
+          table {
+            font-size: 1.25em;
+            }
+
+
+      #hero1 {
+          /* Sizing */
+          width: 80vw;
+          height: 50vh;
+          
+      }
+    /*  pre{
+        font-size: 9px;
+      }
+*/
+}
+
+
+
+
+/*cel mai aproape zoom*/
+  @media screen and (max-width: 600px) {
+          html {
+            font-size: 21px;
+      
+          }
+          body {
+              font-size: 1.35em;
+          }
+          .grid-pagina{  
+              display: block; }
+
+          p{ 
+              font-size:1.1rem;}
+
+          .fab.fa-facebook{
+              animation-name : none;}
+
+          h2{
+              font-size: 1.6rem;}
+  
+          h1{ 
+            font-size:1.8rem;}
+
+         .banner {
+              font-size: 1.6rem;}
+
+          #hero1 {
+              /* Sizing */
+              width: 65vw;
+              height: 40vh;
+              margin: 5px 0px 0px 50px;
+            
+              }
+          pre{
+          font-size: 7px;
+          }
+         /* .servicii{
+          font-size: 6px;
+          }*/
+          .grid-pagina > section{ 
+            font-size:1.15em;
+          }
+
+ 
+  }
+  
